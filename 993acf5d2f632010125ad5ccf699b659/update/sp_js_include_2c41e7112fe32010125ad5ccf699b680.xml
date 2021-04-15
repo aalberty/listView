@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>startWith-filter-scoped</display_name>
+        <source>local</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-15 16:37:33</sys_created_on>
+        <sys_id>2c41e7112fe32010125ad5ccf699b680</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startWith-filter-scoped</sys_name>
+        <sys_package display_value="List View Widget" source="x_324004_list_view">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_ui_script display_value="startFrom-filter.js">1f4ac39d2f632010125ad5ccf699b69b</sys_ui_script>
+        <sys_update_name>sp_js_include_2c41e7112fe32010125ad5ccf699b680</sys_update_name>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:37:33</sys_updated_on>
+        <url/>
+    </sp_js_include>
+</record_update>

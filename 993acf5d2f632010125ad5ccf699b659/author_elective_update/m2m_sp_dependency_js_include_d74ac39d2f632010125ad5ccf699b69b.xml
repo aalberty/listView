@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_js_include">
+    <m2m_sp_dependency_js_include action="DELETE">
+        <order>100</order>
+        <sp_dependency display_value="startWith-filter">5b4ac39d2f632010125ad5ccf699b69b</sp_dependency>
+        <sp_js_include display_value="">9b4ac39d2f632010125ad5ccf699b69b</sp_js_include>
+        <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-14 17:44:57</sys_created_on>
+        <sys_id>d74ac39d2f632010125ad5ccf699b69b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startWith-filter.</sys_name>
+        <sys_package display_value="List View Widget" source="993acf5d2f632010125ad5ccf699b659">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_update_name>m2m_sp_dependency_js_include_d74ac39d2f632010125ad5ccf699b69b</sys_update_name>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-14 17:44:57</sys_updated_on>
+    </m2m_sp_dependency_js_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</application>
+        <file_path/>
+        <instance_id>dded4f7bdbbfdb04536ad5b0cf9619d0</instance_id>
+        <instance_name>dev70604</instance_name>
+        <name>m2m_sp_dependency_js_include_d74ac39d2f632010125ad5ccf699b69b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_js_include"><m2m_sp_dependency_js_include action="INSERT_OR_UPDATE"><order>100</order><sp_dependency display_value="startWith-filter">5b4ac39d2f632010125ad5ccf699b69b</sp_dependency><sp_js_include display_value="">9b4ac39d2f632010125ad5ccf699b69b</sp_js_include><sys_class_name>m2m_sp_dependency_js_include</sys_class_name><sys_created_by>aalberty@itsdelivers.com</sys_created_by><sys_created_on>2021-04-14 17:44:57</sys_created_on><sys_id>d74ac39d2f632010125ad5ccf699b69b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>startWith-filter.</sys_name><sys_package display_value="List View Widget" source="993acf5d2f632010125ad5ccf699b659">993acf5d2f632010125ad5ccf699b659</sys_package><sys_policy/><sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope><sys_update_name>m2m_sp_dependency_js_include_d74ac39d2f632010125ad5ccf699b69b</sys_update_name><sys_updated_by>aalberty@itsdelivers.com</sys_updated_by><sys_updated_on>2021-04-14 17:44:57</sys_updated_on></m2m_sp_dependency_js_include></record_update>]]></payload>
+        <payload_hash>1069133652</payload_hash>
+        <record_name>startWith-filter.</record_name>
+        <reverted_from/>
+        <source>982027dd2fa32010125ad5ccf699b675</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-15 16:32:11</sys_created_on>
+        <sys_id>2c2027dd2fa32010125ad5ccf699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178d660304d0000001</sys_recorded_at>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:32:11</sys_updated_on>
+        <type>Dependency JS Includes</type>
+        <update_guid>0b6232c5e22720102e7539c4a64ab60b</update_guid>
+        <update_guid_history>0b6232c5e22720102e7539c4a64ab60b:-1138792265,7c37ae4d17e320106ac2422f80a9de22:-1138792265</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="startWith-filter.">16b16b112fe32010125ad5ccf699b625</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-15 16:39:08</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_dependency_js_include">m2m_sp_dependency_js_include</sys_db_object>
+        <sys_id>3d3a84a265b342c89773a43cc9000a90</sys_id>
+        <sys_metadata>d74ac39d2f632010125ad5ccf699b69b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startWith-filter.</sys_name>
+        <sys_package display_value="List View Widget" source="x_324004_list_view">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_scope_delete display_value="">0c59d2f3e659445c84adb92623089890</sys_scope_delete>
+        <sys_update_name>m2m_sp_dependency_js_include_d74ac39d2f632010125ad5ccf699b69b</sys_update_name>
+        <sys_update_version display_value="m2m_sp_dependency_js_include_d74ac39d2f632010125ad5ccf699b69b">2c2027dd2fa32010125ad5ccf699b68c</sys_update_version>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:39:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
