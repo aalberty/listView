@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include">
+    <sp_js_include action="DELETE">
+        <display_name/>
+        <source>local</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-14 17:44:57</sys_created_on>
+        <sys_id>9b4ac39d2f632010125ad5ccf699b69b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="List View Widget" source="993acf5d2f632010125ad5ccf699b659">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_ui_script display_value="startFrom-filter.js">1f4ac39d2f632010125ad5ccf699b69b</sys_ui_script>
+        <sys_update_name>sp_js_include_9b4ac39d2f632010125ad5ccf699b69b</sys_update_name>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-14 17:44:57</sys_updated_on>
+        <url/>
+    </sp_js_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</application>
+        <file_path/>
+        <instance_id>dded4f7bdbbfdb04536ad5b0cf9619d0</instance_id>
+        <instance_name>dev70604</instance_name>
+        <name>sp_js_include_9b4ac39d2f632010125ad5ccf699b69b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include"><sp_js_include action="INSERT_OR_UPDATE"><display_name/><source>local</source><sys_class_name>sp_js_include</sys_class_name><sys_created_by>aalberty@itsdelivers.com</sys_created_by><sys_created_on>2021-04-14 17:44:57</sys_created_on><sys_id>9b4ac39d2f632010125ad5ccf699b69b</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="List View Widget" source="993acf5d2f632010125ad5ccf699b659">993acf5d2f632010125ad5ccf699b659</sys_package><sys_policy/><sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope><sys_ui_script display_value="startFrom-filter.js">1f4ac39d2f632010125ad5ccf699b69b</sys_ui_script><sys_update_name>sp_js_include_9b4ac39d2f632010125ad5ccf699b69b</sys_update_name><sys_updated_by>aalberty@itsdelivers.com</sys_updated_by><sys_updated_on>2021-04-14 17:44:57</sys_updated_on><url/></sp_js_include></record_update>]]></payload>
+        <payload_hash>886175398</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>982027dd2fa32010125ad5ccf699b675</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-15 16:32:15</sys_created_on>
+        <sys_id>1d2027dd2fa32010125ad5ccf699b695</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178d6603f1e0000001</sys_recorded_at>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:32:15</sys_updated_on>
+        <type>JS Include</type>
+        <update_guid>c36232c5182720104443c6fca5af820a</update_guid>
+        <update_guid_history>c36232c5182720104443c6fca5af820a:-1127407516,2037ae4d67e320106376b81f03755c20:-1127407516</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">eeb1af112fe32010125ad5ccf699b6cc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-15 16:39:09</sys_created_on>
+        <sys_db_object display_value="" name="sp_js_include">sp_js_include</sys_db_object>
+        <sys_id>651e79a0f5c845908d9e4adf6a86ca10</sys_id>
+        <sys_metadata>9b4ac39d2f632010125ad5ccf699b69b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="List View Widget" source="x_324004_list_view">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_scope_delete display_value="">0c59d2f3e659445c84adb92623089890</sys_scope_delete>
+        <sys_update_name>sp_js_include_9b4ac39d2f632010125ad5ccf699b69b</sys_update_name>
+        <sys_update_version display_value="sp_js_include_9b4ac39d2f632010125ad5ccf699b69b">1d2027dd2fa32010125ad5ccf699b695</sys_update_version>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:39:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

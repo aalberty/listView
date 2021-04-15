@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	c.nextPage = nextPage;
+	c.prevPage = prevPage;
+	c.sortRecords = sortRecords;
+	c.setSort = setSort;
+	c.currentPage = 0;
+	c.sort = {
+		field: "",
+		direction: false
+	};
+	/*
+		In c.options, expect a data structure like the following
+		
+		list_options = {
+			table: <table_name>,
+			display_fields: [field1, field2,...],
+			encoded_query: <encoded_query>
+		}
+		
+		sample input:
+		
+		c.options.list_options = {
+			table: "incident",
+			display_fields: ["short_description", "number", "state"],
+			encoded_query: "priority=3",
+			limit: 15,
+			show_filters: true
+		};
+	*/
+	
+	c.options.list_options = {
+		table: "incident",
+		display_fields: ["number", "short_description", "state"],
+		//encoded_query: "priority=3",
+		//limit: 15,
+		show_filters: true
+	};
+	if(!c.options.list_options.limit){
+			c.options.list_options.limit = 15;
+	}
+	
+	
+	init();
+	
+	function init(){
+		var input = {
+			"action": "init",
+			"data": c.options.list_options
+		};
+		
+		c.server.get(input).then(function(res){
+			if(res && res.data){
+				c.options.list_options.processed_display_fields = res.data.processed_display_fields;
+				c.options.list_options.records = res.data.records;
+			}
+		});
+	}
+	
+	function nextPage(){
+		c.currentPage++;
+	}
+	
+	function prevPage(){
+		c.currentPage--;
+	}
+	
+	function sortRecords(fieldName){
+		setSort(fieldName);
+		if(c.sort.direction){
+			c.options.list_options.records.sort(_compare);
+		}
+		if(!c.sort.direction){
+			c.options.list_options.records.sort(_reverseCompare);
+		}
+	}
+	
+	function setSort(fieldName){
+		if(fieldName == c.sort.field && c.sort.direction == false){
+			c.sort.field = "";
+			c.sort.direction = false;
+			return;
+		}
+		c.sort.field = fieldName;
+		c.sort.direction = !c.sort.direction;
+	}
+	
+	//internal function
+	function _reverseCompare(a, b){
+		var tempa = a[c.sort.field].toLowerCase();
+		var tempb = b[c.sort.field].toLowerCase();
+		if(tempa < tempb){
+			return 1;
+		}
+		if(tempb < tempa){
+			return -1;
+		}
+		return 0;
+	}
+	
+	function _compare(a, b){
+		var tempa = a[c.sort.field].toLowerCase();
+		var tempb = b[c.sort.field].toLowerCase();
+		if(tempa > tempb){
+			return 1;
+		}
+		if(tempb > tempa){
+			return -1;
+		}
+		return 0;
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>tr.odd{
+	background-color: #c5dbcf;
+}
+
+table, th , td {
+  border-top: 1px solid grey !important;
+  border-bottom: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+  color: black;
+}
+
+table{
+	border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+div.table-list-view.parent-container{
+	display: flex;
+  flex-flow: column;
+}
+
+div.controls-container{
+	display: flex;
+  flex-flow: row;
+}
+
+.fa-arrow-left{
+	margin-left: 0;
+  margin-right: auto;
+}
+
+.fa-arrow-right{
+	margin-right: 0;
+  margin-left: auto;
+}
+
+.fa:hover{
+	cursor: pointer;
+  color: #c5dbcf;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>Take a table name and query params, output a table for front end</description>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>TableListView</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	if(input){
+		if(input.action == "init"){
+			var gr = new GlideRecord(input.data.table);
+			if(input.data.encoded_query){
+				gr.addEncodedQuery(input.data.encoded_query);
+			}
+			gr.query();
+			data.records = [];
+			while(gr.next()){
+				var temp = {};
+				for(var i = 0; i < input.data.display_fields.length; i++){
+					if(input.data.display_fields.length == 'sys_id'){
+						temp.sys_id = gr.getUniqueValue();
+					} else {
+						temp[input.data.display_fields[i]] = gr.getValue(input.data.display_fields[i]);
+					}
+				}
+				data.records.push(temp);
+			}
+			
+			//get display names for target fields
+			data.processed_display_fields = [];
+			for(var i = 0; i < input.data.display_fields.length; i++){
+				var temp = {
+					name: input.data.display_fields[i],
+					displayName: ""
+				};
+				var field = gr.getElement(input.data.display_fields[i]);
+				var displayName = field.getLabel();
+				temp.displayName = displayName;
+				data.processed_display_fields.push(temp);
+			}
+			
+		}
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
+        <sys_created_on>2021-04-12 16:34:57</sys_created_on>
+        <sys_id>db4ac39d2f632010125ad5ccf699b69b</sys_id>
+        <sys_mod_count>122</sys_mod_count>
+        <sys_name>TableListView</sys_name>
+        <sys_package display_value="List View Widget" source="x_324004_list_view">993acf5d2f632010125ad5ccf699b659</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
+        <sys_update_name>sp_widget_db4ac39d2f632010125ad5ccf699b69b</sys_update_name>
+        <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
+        <sys_updated_on>2021-04-15 16:45:05</sys_updated_on>
+        <template><![CDATA[<div class="table-list-view parent-container">
+
+
+  
+  
+  <table class="table table-hover">
+    <tr ng-show="c.options.list_options.show_filters == true">
+    	<td ng-repeat="field in c.options.list_options.processed_display_fields">
+      	<input class="form-control" 
+               placeholder={{field.displayName}}
+               ng-model="c.search[field.name]">
+      </td>
+    </tr>
+    <tr>
+      <th ng-click="c.sortRecords(field.name)"
+          ng-repeat="field in c.options.list_options.processed_display_fields">
+      	{{field.displayName}}
+        <i class="fa" ng-class="{'fa-arrow-up': c.sort.field == field.name && c.sort.direction == true && c.sort.field != '', 
+                                 'fa-arrow-down': c.sort.field == field.name && c.sort.direction == false && c.sort.field != ''}"></i>
+      </th>
+    </tr>
+    
+    <tr ng-repeat="record in c.filteredRecords = (c.options.list_options.records | filter : c.search)
+                   | startFrom:c.currentPage * c.options.list_options.limit 
+                   | limitTo: c.options.list_options.limit"
+        ng-class-odd="'odd'">
+      <td ng-repeat="field in c.options.list_options.processed_display_fields">
+        {{record[field.name]}}
+      </td>
+    </tr>
+  </table>
+  
+  
+  
+  <div class="controls-container">
+  
+    <i class="fa fa-arrow-left" 
+       ng-click="c.prevPage()"
+       ng-hide="c.currentPage==0"></i>
+    <i class="fa fa-arrow-right" 
+       ng-click="c.nextPage()"
+       ng-hide="(c.currentPage + 1)*c.options.list_options.limit >= c.filteredRecords.length"></i>
+    
+    
+  </div>
+  
+  
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>
