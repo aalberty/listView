@@ -54,9 +54,7 @@
 		};
 		
 		c.server.get(input).then(function(res){
-			console.log(res);
 			if(res && res.data){
-				console.log(res.data);
 				c.options.list_options.processed_display_fields = res.data.processed_display_fields;
 				c.options.list_options.records = res.data.records;
 			}
@@ -219,14 +217,14 @@ div.controls-container{
         <sys_created_by>aalberty@itsdelivers.com</sys_created_by>
         <sys_created_on>2021-04-12 16:34:57</sys_created_on>
         <sys_id>db4ac39d2f632010125ad5ccf699b69b</sys_id>
-        <sys_mod_count>121</sys_mod_count>
+        <sys_mod_count>122</sys_mod_count>
         <sys_name>TableListView</sys_name>
         <sys_package display_value="List View Widget" source="x_324004_list_view">993acf5d2f632010125ad5ccf699b659</sys_package>
         <sys_policy/>
         <sys_scope display_value="List View Widget">993acf5d2f632010125ad5ccf699b659</sys_scope>
         <sys_update_name>sp_widget_db4ac39d2f632010125ad5ccf699b69b</sys_update_name>
         <sys_updated_by>aalberty@itsdelivers.com</sys_updated_by>
-        <sys_updated_on>2021-04-15 16:43:30</sys_updated_on>
+        <sys_updated_on>2021-04-15 16:45:05</sys_updated_on>
         <template><![CDATA[<div class="table-list-view parent-container">
 
 
